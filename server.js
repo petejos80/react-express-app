@@ -22,14 +22,20 @@ mongoose.connect(
 const db = require('./models');
 const { Article } = db
 
-Article.create({
-  title: 'Manual insert',
-  url: 'https://www.example.com/insert'
-}).then(x => console.log(x))
-.catch(x => console.error(x));
+
+// Route definitions
+app.post("/api/saved", (req, res) => {
+  var article = req.body
+    Article.create(article)
+    .then(() => {
+      res.json(article)
+    })
+    .catch((err) => {
+      res.json(err)
+    })
+});
 
 
-// Send every other request to the React app
 // Define any API routes before this runs
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
