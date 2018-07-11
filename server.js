@@ -20,7 +20,14 @@ mongoose.connect(
 );
 
 const db = require('./models');
-console.log(db.Article);
+const { Article } = db
+
+Article.create({
+  title: 'Manual insert',
+  url: 'https://www.example.com/insert'
+}).then(x => console.log(x))
+.catch(x => console.error(x));
+
 
 // Send every other request to the React app
 // Define any API routes before this runs
