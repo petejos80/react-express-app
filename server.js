@@ -36,7 +36,8 @@ app.post("/api/saved", (req, res) => {
     })
 });
 
-app.get("api/saved", (req, res) => {
+app.get("/api/saved", (req, res) => {
+  // res.json("sucess")
   Article.find({}).then(articles => res.json(articles))
 })
 
