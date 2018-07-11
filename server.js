@@ -5,6 +5,7 @@ const mongoose = require("mongoose");
 const PORT = process.env.PORT || 3001;
 const app = express();
 
+
 // Define middleware here
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -34,6 +35,10 @@ app.post("/api/saved", (req, res) => {
       res.json(err)
     })
 });
+
+app.get("api/saved", (req, res) => {
+  Article.find({}).then(articles => res.json(articles))
+})
 
 
 // Define any API routes before this runs
