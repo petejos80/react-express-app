@@ -74,9 +74,7 @@ class Search extends Component {
                 placeholder="End Year (required)"
               />
               <FormBtn
-                disabled={!(this.state.topic && this.state.startYear && this.state.endYear)}
-                onClick={this.searchArticles}
-              >
+                disabled={!(this.state.topic && this.state.startYear && this.state.endYear)} onClick={this.searchArticles} >
                 Submit
               </FormBtn>
             </form>
@@ -97,13 +95,15 @@ class Search extends Component {
                   </h5>
                   <ul>
                 <a target='_blank' href={article.web_url}>
-                    {article.web_url}
-                </a>
+									{article.web_url}
+								</a>
                   </ul>
                   <ul>
                     {article.pub_date}
                   </ul>
-                    <SaveBtn onClick={() => this.saveArticleSubmit(article.headline.main, article.web_url, article.pub_date)} />
+                    <SaveBtn onClick={() => this.saveArticleSubmit(article.headline.main, article.web_url, article.pub_date)} >
+                    Save
+                    </SaveBtn>
                   </ListItem> 
                 ))}
               </List>

@@ -8,7 +8,7 @@ const NoMatch = () => (
       <Col size="md-12">
         <Jumbotron>
           <h1>
-            No Matches!
+            Article not found!
           </h1>
         </Jumbotron>
       </Col>

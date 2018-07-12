@@ -2,9 +2,9 @@ import React from "react";
 import "./SaveBtn.css";
 
 const SaveBtn = props => (
-  <span className="save-btn text-align-right" {...props}>
-    ✔Save
-  </span>
+<button {...props} style={{ float: "right", marginBottom: 10 }} className="btn btn-success">
+{props.children}
+</button>
 );
 
 export default SaveBtn;
