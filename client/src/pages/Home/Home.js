@@ -1,11 +1,9 @@
 import React, { Component } from "react";
-import DeleteBtn from "../../components/DeleteBtn";
 import Jumbotron from "../../components/Jumbotron";
 import API from "../../utils/API";
-import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../../components/Grid";
 import { List, ListItem } from "../../components/List";
-import { Input, TextArea, FormBtn } from "../../components/Form";
+import { Input, FormBtn } from "../../components/Form";
 import SaveBtn from "../../components/SaveBtn";
 
 class Search extends Component {
@@ -35,8 +33,8 @@ class Search extends Component {
         link: link,
         date: date
       })
-        .then(res => alert("saved article"))
-        .catch(err => alert("article alredy saved"));
+        .then(res => alert("Article saved!"))
+        .catch(err => alert("This article was already saved!"));
   };
 
   handleInputChange = event => {
@@ -75,10 +73,11 @@ class Search extends Component {
               />
               <FormBtn
                 disabled={!(this.state.topic && this.state.startYear && this.state.endYear)} onClick={this.searchArticles} >
-                Submit
-              </FormBtn>
+                Search
+              </ FormBtn>
             </form>
           </Col>
+
           <Col size="md-12 sm-12">
             <Jumbotron>
               <h1>Search Results</h1>
