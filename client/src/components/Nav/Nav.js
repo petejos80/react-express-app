@@ -1,11 +1,12 @@
 import React from "react";
 import { Container } from "../Grid";
+import "./Nav.css";
 
 const Nav = () => (
-  <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
+  <nav className="navbar navbar-expand-lg navbar-light bg-light">
     <Container>
     <a className="navbar-brand" href="/">
-      NY Times Scraper Home
+      New York Times Scraper
     </a>
     <a className="navbar-brand" href="/saved">
       Saved Articles

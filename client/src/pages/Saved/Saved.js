@@ -47,7 +47,7 @@ class Saved extends Component {
         <Row>
           <Col size="md-12 sm-12">
             <Jumbotron>
-              <h1>Saved Articles On My List</h1>
+              <h1>Saved Articles</h1>
             </Jumbotron>
             {this.state.articles.length ? (
               <List>
@@ -67,7 +67,9 @@ class Saved extends Component {
                     <ul>
                       {article.date}
                     </ul>
-                    <DeleteBtn onClick={() => this.deleteArticleSubmit(article._id)} />
+                    <DeleteBtn onClick={() => this.deleteArticleSubmit(article._id)} >
+                      Delete
+                    </ DeleteBtn>
                   </ListItem>
                 ))}
               </List>

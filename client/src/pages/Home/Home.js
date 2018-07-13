@@ -50,7 +50,7 @@ class Search extends Component {
     return (
       <Container fluid>
         <Row>
-          <Col size="md-3">
+          <Col size="md-12">
             <Jumbotron>
               <h1>Search</h1>
             </Jumbotron>
@@ -79,9 +79,9 @@ class Search extends Component {
               </FormBtn>
             </form>
           </Col>
-          <Col size="md-9 sm-12">
+          <Col size="md-12 sm-12">
             <Jumbotron>
-              <h1>Articles On My List</h1>
+              <h1>Search Results</h1>
             </Jumbotron>
             {this.state.articles.length ? (
               <List>
@@ -108,7 +108,7 @@ class Search extends Component {
                 ))}
               </List>
             ) : (
-              <h3>No Results to Display</h3>
+              <h3>No Results</h3>
             )}
           </Col>
         </Row>

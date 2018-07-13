@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const apiKey = "38c636a55a034777a89339eee9c68565";
+const apiKey = process.env.NYT_API_KEY;
 
 export default {
   
