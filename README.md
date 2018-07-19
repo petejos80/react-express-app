@@ -17,6 +17,12 @@ git clone https://github.com/petejos80/react-express-app.git
 npm install && cd client && npm install
 ```
 
+* Start the MongoDB database:
+
+```
+mongod
+```
+
 * Run the application from the project root:
 
 ```
